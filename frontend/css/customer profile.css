@@ -1,0 +1,41 @@
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+}
+.profile-image {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.profile-info {
+    color: #ADD8E6; /* Sky blue color for owner details */
+}
+.cart {
+    background-color: #87CEEB; /* Light sky blue color for cart */
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.car-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.car-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

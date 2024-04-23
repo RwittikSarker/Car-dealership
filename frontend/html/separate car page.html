@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/separate car page.css">
+    <title>Product Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="product-details-container">
+            <div class="product-details">
+                <div class="product-image">
+                    <img src="product1.jpg" alt="Product 1" id="productImage">
+                    <button class="prev" onclick="prevImage()">&#10094;</button>
+                    <button class="next" onclick="nextImage()">&#10095;</button>
+                </div>
+                <h2>Product 1</h2>
+                <p><strong>Description:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><strong>Price:</strong> $99.99</p>
+                <p><strong>Availability:</strong> In stock</p>
+                <p><strong>Manufacturer:</strong> ABC Company</p>
+                <!-- Add more details as needed -->
+            </div>
+            <div class="salesman-details">
+                <div class="salesman-image">
+                    <img src="salesman.jpg" alt="Salesman">
+                </div>
+                <div class="salesman-info">
+                    <p><strong>Contact:</strong> email@example.com</p>
+                    <!-- Add more salesman details as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var currentImageIndex = 0;
+        var images = ["C:\Users\Asus\OneDrive\Pictures\Screenshot 2022-05-23 145205.png", "C:\Users\Asus\OneDrive\Pictures\Screenshot 2022-05-23 145205.png"]; // Add more image URLs as needed
+
+        function showImage(index) {
+            if (index >= 0 && index < images.length) {
+                document.getElementById("productImage").src = images[index];
+                currentImageIndex = index;
+            }
+        }
+
+        function prevImage() {
+            currentImageIndex--;
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            }
+            showImage(currentImageIndex);
+        }
+
+        function nextImage() {
+            currentImageIndex++;
+            if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+            showImage(currentImageIndex);
+        }
+
+        // Show the first image initially
+        showImage(0);
+    </script>
+</body>
+</html>
